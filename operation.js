@@ -1,6 +1,6 @@
-const MongoClient = require('mongodb');
+const MongoClient = require('mongodb').MongoClient;
 
-const url = 'mongodb://localhost:27017/';
+const url = '';
 //const url = "mongodb://kay:MongoDbzero@mycluster0-shard-00-00.mongodb.net:27017,mycluster0-shard-00-01.mongodb.net:27017,mycluster0-shard-00-02.mongodb.net:27017/admin?ssl=true&replicaSet=Mycluster0-shard-0&authSource=admin";
 
 
@@ -11,7 +11,7 @@ function findInf(resp, database, table, query){
             resp.status(500).json('Error connecting to database');
         }
         dbObject = db.db(database);
-        //console.log(query);
+        console.log(query);
         dbObject.collection(table).find(query).toArray(function(err, res){
             if(err){
                 resp.status(500).json('Data not found');
@@ -24,7 +24,7 @@ function findInf(resp, database, table, query){
 
 function insertData(response, database, table, data){
     //response.setHeader('Content-Type', 'text/html');
-    MongoClent.connect(url,{ useNewUrlParser: true }, function(err, db){
+    MongoClient.connect(url,{ useNewUrlParser: true }, function(err, db){
         if(err) {
             response.status(500).json('Error connecting to database.');
         }
