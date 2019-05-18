@@ -1,0 +1,21 @@
+{
+  "name": "residences",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beta-ori/Residences.git"
+  },
+  "author": "Khayrul Islam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/beta-ori/Residences/issues"
+  },
+  "homepage": "https://github.com/beta-ori/Residences#readme"
+}
